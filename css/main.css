@@ -1,0 +1,169 @@
+/* Variables */
+:root {
+    --primary-color: #d69e3d;
+    --secondary-color: #966f2c;  
+    --white: #ffffff; 
+    --black: #000000; 
+    --font-heading: 'Lato', sans-serif;
+    --font-body: 'Karla', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+body {
+    color: var(--black);
+    font-family: var(--font-body);
+}
+
+/* Header Styles */
+.main-header {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url(../images/hero-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--white);
+}
+
+
+/* Navigation Container */
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.391);
+}
+
+/* Logo */
+.logo img {
+    height: 31px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+width: 100%;
+}
+
+/* Hero Section */
+.hero-banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.875rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+
+
+/* CTA Button Styles */
+.cta-button {
+    padding: 1rem 2.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility features */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
