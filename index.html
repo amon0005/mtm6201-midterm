@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@700;900&display=swap">
     <title>My Coffee House</title>
 </head>
 <body>
@@ -19,6 +18,15 @@
                 <div class="logo">
                     <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House Logo">
                 </div>
+
+                <!-- Mobile Hamburger Button -->
+                 <label for="nav-toggle" class="hamburger" aria-label="Menu">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    </label>
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                </input>
 
             <!-- Main Navigation -->  
              <nav class="main-nav">
@@ -43,5 +51,33 @@
                 </div>
             </div>
      </header>
+
+     <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-text">
+           <h4>WELCOME TO MY COFFE HOUSE</h4>
+           <h2>EXPERIENCE A NEW WAY <br> TO TASTE COFFE</h2>
+            </div>
+            <div class="image-grid">
+
+                <!-- First Column -->
+                 <div class="grid-column">
+                <img src="images/latte.jpeg" alt="latte being poured">
+                </div>
+
+                <!-- Second Column -->
+                  <div class="grid-column">
+                <img src="images/coffee-beans.jpeg" alt="Coffee beans in a glass">
+                <img src="images/three-cups.jpeg" alt="Coffee being poured into pot">
+                </div>
+
+                 <!-- Third Column -->
+                  <div class="grid-column">
+                <img src="images/pouring-coffee.jpeg" alt="Two cups with latte art">
+                <img src="images/smiling-employee.jpeg" alt="Smiling barista with expresso machine">
+            </div>
+        </div>
+      </section>
 </body>
 </html>
