@@ -738,8 +738,8 @@ width: 100%;
 
 /* About Us Section */
 .about-us-section {
-    background-color: var(--background-color);
-    padding: 6rem 0;
+   background-color: var(--background-color);
+   padding: 6rem 0;
 }
 
 .about-us-content {
@@ -748,12 +748,25 @@ width: 100%;
     gap: 4rem;
 }
 
+.about-us-image {
+    flex: 1;
+    order: 1;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
 .about-us-text {
     flex: 1;
     padding-right: 2rem;
+    order: 2;
 }
 
-.about-us-text h4 {
+.about-us-content h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
@@ -763,34 +776,23 @@ width: 100%;
     margin-bottom: 1rem;
 }
 
-.about-us-text h2 {
+.about-us-content h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
-.about-us-text p {
+.about-us-content p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: var(--black);
 }
 
-.about-us-image {
-    flex: 1;
-}
-
-.about-us-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Dark CTA Button */
+/* Dark CTA button */
 .cta-button.dark {
     background-color: var(--black);
     color: var(--white);
@@ -808,17 +810,13 @@ width: 100%;
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .about-us-text {
-        padding-right: 0;
-        order: 2;
+        padding-left: 0;;
     }
-    
-    .about-us-image {
-        order: 1;
-    }
-    
+
     .about-us-text h2 {
         font-size: 2rem;
     }
+
 }
