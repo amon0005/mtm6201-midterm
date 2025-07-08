@@ -30,6 +30,13 @@ body {
 
 
 /* Navigation Container */
+.html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    scroll-margin-top: 100px;
+}
 .nav-container {
     width: 100%;
     max-width: 1200px;
@@ -45,6 +52,7 @@ body {
     z-index: 100;
     border-bottom: 1px solid rgba(255, 255, 255, 0.391);
 }
+
 
 /* Logo */
 .logo img {
@@ -220,9 +228,15 @@ width: 100%;
 @media (max-width: 1099px) {
 
 .nav-toggle {
-    position: absolute;
-    opacity: 0;
-    left: -9999px;
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
 }
 
 /* Hamburger icon */
@@ -822,7 +836,7 @@ width: 100%;
 }
 
 /* Testimonial Section */
-.testimonial-section {
+.testimonials-section {
     background-color: var(--black);
     color: var(--white);
     padding: 6rem 0;
