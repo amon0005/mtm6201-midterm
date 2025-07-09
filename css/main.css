@@ -908,6 +908,10 @@ width: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.about-us-text {
+    text-align: left;
+}
+
 
 .about-us-text h4 {
     font-family: var(--font-heading);
@@ -942,22 +946,19 @@ width: 100%;
     }
 
     .about-us-content {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
         gap: 3rem;
-    }
-
-    .about-us-image {
-        flex: 1;
-    }
-
-    .about-us-text {
-        flex: 1;
     }
 
     .about-us-text h2 {
         font-size: 2rem; /* Tablet font size */
     }
+
+    .about-us-image img {
+        max-width: 100%;
+    }
+
+
 
 }
 
@@ -969,13 +970,48 @@ width: 100%;
     }
 
     .about-us-content {
+        flex-direction: row;
+        align-items: center;
         gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .about-us-image {
+        flex: 1;
+    }
+
+    .about-us-text {
+        flex: 1;
+        max-width: none;
     }
 
     .about-us-text h2 {
         font-size: 2.5rem; /* Desktop font size */
     }
 
+}
+
+/* Button styles  */
+.cta-button.dark {
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--black);
+    padding: 0.875rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.cta-button.dark:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
